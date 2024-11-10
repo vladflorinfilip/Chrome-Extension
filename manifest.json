@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "To Do List",
+    "version": "1.0.0",
+    "description": "A chrome extension that interacts with a to do list application",
+    "author": "Vlad Filip",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting",
+        "http://localhost:4444/*"
+    ],
+    "icons": {
+        "128": "Vlad.png"
+      },
+    "action": {
+        "default_popup": "HTML/popup.html",
+        "default_title": "To Do List"
+    },
+    "web_accessible_resources": [
+        { "resources": ["config.json"],
+        "matches": ["<all_urls>"]}
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://project.team.luminance.com/projects/training/wiki/dev-infrastructure"
+    ]
+  }
